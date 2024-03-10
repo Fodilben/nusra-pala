@@ -18,32 +18,31 @@ const App = () => {
   const { language } = useContext(LanguageContext);
   return (
     <div className="App">
-      <LanguageToggle /> {/* Language toggle component */}
-      <IntlProvider
-        locale={language}
-        messages={resources[language]}
-      ></IntlProvider>
-      <main>
-        <section>
-          <Header />
-        </section>
-        <section>
-          <Hero />
-        </section>
-        <section>
-          <AboutUs />
-        </section>
-        <section>
-          <Goal />
-        </section>
-        <section>
-          <Contact />
-        </section>
-        <section>
-          <Footer />
-        </section>
-      </main>
+      <LanguageToggle />
+      <IntlProvider locale={language} messages={resources[language]}>
+        <main>
+          <section>
+            <Header />
+          </section>
+          <section>
+            <Hero />
+          </section>
+          <section>
+            <AboutUs />
+          </section>
+          <section>
+            <Goal />
+          </section>
+          <section>
+            <Contact />
+          </section>
+          <section>
+            <Footer />
+          </section>
+        </main>
+      </IntlProvider>
     </div>
   );
 };
+
 export default App;
