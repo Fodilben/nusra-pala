@@ -24,29 +24,27 @@ const App = () => {
         messages={resources[language]}
       ></IntlProvider>
       <main>
-      <section>
-        <Header />
-      </section>
-      <section>
-        <Hero />
-      </section>
-      <section>
-        <AboutUs />
-      </section>
-      <section>
-        <Goal />
-      </section>
-      <section>
-        <Contact />
-      </section>
-      <section>
-        <Footer />
-      </section>
-    </main>
+        <section>
+          <Header />
+        </section>
+        <section>
+          <Hero />
+        </section>
+        <section>
+          <AboutUs />
+        </section>
+        <section>
+          <Goal />
+        </section>
+        <section>
+          <Contact />
+        </section>
+        <section>
+          <Footer />
+        </section>
+      </main>
     </div>
   );
 };
 
-
-
-
+export default App;
