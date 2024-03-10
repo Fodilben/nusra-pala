@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useContext } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { LanguageContext } from "./LanguageContext";
+// Import if using context
+import LanguageToggle from "../compontents/LanguageToggle ";
+import { IntlProvider, FormattedMessage } from "react-intl";
+import enMessages from "../data/messages.en.json";
+import arMessages from "../data/messages.ar.json";
+const resources = {
+  en: enMessages,
+  ar: arMessages,
+};
 
+const App = () => {
+  const { language } = useContext(LanguageContext);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <div className="App">
+      <LanguageToggle /> {/* Language toggle component */}
+      <IntlProvider
+        locale={language}
+        messages={resources[language]}
+      ></IntlProvider>
+    </div>
+  );
+};
+export default App;
