@@ -1,3 +1,6 @@
+import { Button } from "react-daisyui";
+
+import { Header, Hero, AboutUs, Goal, Contact, Footer } from "./sections";
 import React, { useContext } from "react";
 
 import { LanguageContext } from "./LanguageContext";
@@ -20,7 +23,30 @@ const App = () => {
         locale={language}
         messages={resources[language]}
       ></IntlProvider>
+      <main>
+      <section>
+        <Header />
+      </section>
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <AboutUs />
+      </section>
+      <section>
+        <Goal />
+      </section>
+      <section>
+        <Contact />
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </main>
     </div>
   );
 };
-export default App;
+
+
+
+
