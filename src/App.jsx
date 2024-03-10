@@ -1,10 +1,28 @@
 import { Button } from "react-daisyui";
 
+import { Header, Hero, AboutUs, Goal, Contact, Footer } from "./sections";
+
 export default function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button color="primary">Click me!</Button>
-    </>
+    <main>
+      <section>
+        <Header />
+      </section>
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <AboutUs />
+      </section>
+      <section>
+        <Goal />
+      </section>
+      <section>
+        <Contact />
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </main>
   );
 }
