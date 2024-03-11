@@ -4,7 +4,7 @@ import { Header, Hero, AboutUs, Goal, Contact, Footer } from "./sections";
 
 export default function App() {
   return (
-    <main>
+    <main className="relative">
       <section>
         <Header />
       </section>
