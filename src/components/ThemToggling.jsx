@@ -8,7 +8,7 @@ const ThemToggling = () => {
           <input
             id="switch-component"
             type="checkbox"
-            class="absolute w-8 h-4 transition-colors duration-300 rounded-full appearance-none cursor-pointer peer bg-blue-gray-100 checked:bg-orange-500 peer-checked:border-gray-900 peer-checked:before:bg-orange-500"
+            class="absolute w-8 h-4 transition-colors duration-300 rounded-full appearance-none cursor-pointer peer bg-gray-300 checked:bg-orange-500 peer-checked:border-gray-900 peer-checked:before:bg-orange-500"
             defaultChecked
           />
           <label
@@ -17,7 +17,7 @@ const ThemToggling = () => {
           >
             <div
               class="inline-block p-5 rounded-full top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
-              data-ripple-dark="true"
+              data-ripple-dark="false"
             ></div>
           </label>
         </div>
