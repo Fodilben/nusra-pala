@@ -1,11 +1,19 @@
 import logo from "./logo.png";
 import arabic from "./arabic.png";
-import background from "./background.png";
-<<<<<<< HEAD
-import english from "./english.png";
+import background from "./image5.png";
+import orangeLogo from "./orangeLogo.png";
+import instagram from "./instagram.png";
+import facebook from "./facebook.png";
+import tiktok from "./tiktok.png";
+import youtube from "./youtube.png";
 
-export { logo, arabic, background, english };
-=======
-
-export { logo, arabic, background };
->>>>>>> c0af8048a810aece1b7b94a2e640a7d27c21dcfe
+export {
+  logo,
+  arabic,
+  background,
+  orangeLogo,
+  instagram,
+  facebook,
+  tiktok,
+  youtube,
+};
