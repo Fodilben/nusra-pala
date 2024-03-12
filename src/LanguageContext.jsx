@@ -3,9 +3,12 @@ import React, { createContext, useState } from "react";
 const LanguageContext = createContext();
 
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("es");
+  const [language, setLanguage] = useState("ar");
 
-  const changeLanguage = (newLanguage) => setLanguage(newLanguage);
+  const changeLanguage = (boolArabic) => {
+    const newLanguage = boolArabic ? "ar" : "en";
+    setLanguage(newLanguage);
+  };
 
   return (
     <LanguageContext.Provider value={{ language, changeLanguage }}>
