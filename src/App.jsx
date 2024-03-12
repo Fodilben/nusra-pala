@@ -1,44 +1,28 @@
 import { Button } from "react-daisyui";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HomePage, About, HomeLayout } from "./pages";
 
-import { Header, Hero, AboutUs, Goal, Contact, Footer } from "./sections";
 import React, { useContext } from "react";
 
-import { LanguageContext } from "./LanguageContext";
-
-import { IntlProvider, FormattedMessage } from "react-intl";
-import enMessages from "../data/messages.en.json";
-import arMessages from "../data/messages.ar.json";
-const resources = {
-  en: enMessages,
-  ar: arMessages,
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  const { language } = useContext(LanguageContext);
-  return (
-    <div className="App">
-      <IntlProvider locale={language} messages={resources[language]}>
-        <main>
-          <section>
-            <Header />
-          </section>
-          <section>{/* <Hero /> */}</section>
-          <section>
-            <AboutUs />
-          </section>
-          <section>
-            <Goal />
-          </section>
-          <section>
-            <Contact />
-          </section>
-          <section>
-            <Footer />
-          </section>
-        </main>
-      </IntlProvider>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
