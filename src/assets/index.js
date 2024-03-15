@@ -6,7 +6,7 @@ import instagram from "./instagram.png";
 import facebook from "./facebook.png";
 import tiktok from "./tiktok.png";
 import youtube from "./youtube.png";
-
+import phone from "./phone.png";
 export {
   logo,
   arabic,
@@ -16,4 +16,5 @@ export {
   facebook,
   tiktok,
   youtube,
+  phone,
 };

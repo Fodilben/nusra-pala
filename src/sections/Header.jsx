@@ -6,7 +6,7 @@ import { useGlobalContext } from "../components/Context";
 const Header = () => {
   const { openSidebar, isSidebarOpen } = useGlobalContext();
   return (
-    <header className="px-4  bg-white w-full h-auto rounded-b-xl absolute z-10">
+    <header className="px-4 bg-base-100   w-full h-auto rounded-b-xl absolute z-10">
       {isSidebarOpen ? (
         <Sidebar className="text-xl" />
       ) : (

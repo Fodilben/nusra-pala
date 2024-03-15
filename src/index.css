@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background-color: #ffffff;
-}
+
 @layer components {
   .section-padding {
     @apply px-[29px];

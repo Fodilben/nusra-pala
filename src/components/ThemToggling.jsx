@@ -1,6 +1,13 @@
 import React from "react";
+import { useGlobalContext } from "./Context";
 
 const ThemToggling = () => {
+  const { themeTogg, theme } = useGlobalContext();
+
+  const handelToggle = (e) => {
+    const newTheme = e.target.checked ? "myDark" : "myLight";
+    themeTogg(newTheme);
+  };
   return (
     <div>
       <div className="inline-flex items-center">
@@ -9,7 +16,8 @@ const ThemToggling = () => {
             id="switch-component"
             type="checkbox"
             className="absolute w-8 h-4 transition-colors duration-300 rounded-full appearance-none cursor-pointer peer bg-gray-300 checked:bg-orange-500 peer-checked:border-gray-900 peer-checked:before:bg-orange-500"
-            defaultChecked
+            onChange={handelToggle}
+            checked={theme === "myLight" ? false : true}
           />
           <label
             htmlFor="switch-component"
